@@ -1,0 +1,62 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #0066ff);
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+    margin-top: 2rem;
+    padding: 20px;
+    justify-content: center;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(127, 127, 127, 0.72);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.72rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-op  {
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.72);
+    text-align: right;
+    overflow: hidden;
+}
+.output .current-op {
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    color: white;
+    text-align: right;
+    overflow: hidden;
+}
+
+button {
+    font-size: 2rem;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: background 0.333s;
+}
+
+button:hover,
+button:focus {
+    background: #c7c7c7;
+}
